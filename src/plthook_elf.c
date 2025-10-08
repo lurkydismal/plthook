@@ -577,9 +577,7 @@ static void mem_prot_end( mem_prot_iter_t* iter ) {
 #endif
 
 static int plthook_open_real( plthook_t** plthook_out, struct link_map* lmap ) {
-    plthook_t plthook = {
-        NULL,
-    };
+    plthook_t plthook = { 0 };
     const Elf_Dyn* dyn;
     const char* dyn_addr_base = NULL;
 
